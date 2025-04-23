@@ -17,7 +17,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
  
-<!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js)  -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q5XP3EFMS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -28,7 +28,6 @@
        'analytics_storage': 'granted',
        'ad_storage': 'granted'
     });
-
 
       // Initialize Google Analytics with error handling
       try {
@@ -71,8 +70,6 @@
       </div>
     </div>
   </nav>
-
-
 
 </div>
 
@@ -233,7 +230,7 @@
           </div>
       
       <div class="text-center mt-3">
-          <p class="mb-0">&copy; 2025 LPVTS. All Rights Reserved.</p>
+          <p class="mb-0">© 2025 LPVTS. All Rights Reserved.</p>
       </div>
   </div>
 </footer>
@@ -291,6 +288,17 @@
       toastDiv.remove();
     });
   }
+
+  // Track Send Message button click for GA4
+  document.querySelector('form#contactForm .btn.btn-solar').addEventListener('click', function() {
+    const form = document.getElementById('contactForm');
+    if (form.checkValidity()) {
+      gtag('event', 'send_message_click', {
+        'button_text': 'Send Message',
+        'page_location': window.location.href
+      });
+    }
+  });
 
   // Contact Form Validation and EmailJS
   const form = document.getElementById('contactForm');
@@ -359,7 +367,6 @@
     document.documentElement.scrollTop = 0;
   };
 </script>
-
 
 </body>
 </html>
