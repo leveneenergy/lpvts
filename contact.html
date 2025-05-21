@@ -249,47 +249,20 @@
   AOS.init();
 
   // Initialize EmailJS with your public key
-  (function() {
+ (function() {
     emailjs.init({
-      publicKey: "bOs0ws71FzcK7XyB5"
+      publicKey: " Yyt-ipsIhKXAnM_rZ"
     });
   })();
 
-  // Function to show a toast notification
-  function showToast(message, type = 'success') {
-    const toastContainer = document.querySelector('.toast-container');
-    
-    // Create a new toast element
-    const toastDiv = document.createElement('div');
-    toastDiv.className = `toast align-items-center text-white bg-${type} border-0`;
-    toastDiv.setAttribute('role', 'alert');
-    toastDiv.setAttribute('aria-live', 'assertive');
-    toastDiv.setAttribute('aria-atomic', 'true');
-    
-    // Toast content
-    toastDiv.innerHTML = `
-      <div class="d-flex">
-        <div class="toast-body">
-          ${message}
-        </div>
-        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  // Function to show an alert message
+  function showAlert(message, type = 'success', targetDiv) {
+    targetDiv.innerHTML = `
+      <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     `;
-    
-    // Append toast to container
-    toastContainer.appendChild(toastDiv);
-    
-    // Initialize and show the toast
-    const toast = new bootstrap.Toast(toastDiv, {
-      autohide: true,
-      delay: 1000 
-    });
-    toast.show();
-    
-    // Remove the toast from DOM after it hides
-    toastDiv.addEventListener('hidden.bs.toast', () => {
-      toastDiv.remove();
-    });
   }
 
   // Contact Form Validation and EmailJS
@@ -307,15 +280,15 @@
         message: document.getElementById('message').value
       };
 
-      emailjs.send('service_mhva9q3', 'template_l5xudq4', formData)
+      emailjs.send(' service_u68soli', 'template_cythqjb', formData)
         .then((response) => {
-          // Show success toast
-          showToast('Thank you! Your message has been sent.', 'success');
+          // Show success alert
+          showAlert('Thank you! Your message has been sent.', 'success', alertDiv);
           form.reset();
           form.classList.remove('was-validated');
         }, (error) => {
-          // Show error toast
-          showToast('Something went wrong. Please try again later.', 'danger');
+          // Show error alert
+          showAlert('Something went wrong. Please try again later.', 'danger', alertDiv);
         });
     }
   });
@@ -333,18 +306,19 @@
         email: document.getElementById('newsletterEmail').value
       };
 
-      emailjs.send('service_mhva9q3', 'template_l5xudq4', formData)
+      emailjs.send(' service_u68soli', 'template_cythqjb', formData)
         .then((response) => {
-          // Show success toast
-          showToast('Thank you for subscribing!', 'success');
+          // Show success alert
+          showAlert('Thank you for subscribing!', 'success', newsletterAlertDiv);
           newsletterForm.reset();
           newsletterForm.classList.remove('was-validated');
         }, (error) => {
-          // Show error toast
-          showToast('Failed to subscribe. Please try again later.', 'danger');
+          // Show error alert
+          showAlert('Failed to subscribe. Please try again later.', 'danger', newsletterAlertDiv);
         });
     }
   });
+
 
   // Back to Top Button
   const backToTopBtn = document.getElementById('backToTop');
@@ -359,7 +333,6 @@
     document.documentElement.scrollTop = 0;
   };
 </script>
-
 
 </body>
 </html>
