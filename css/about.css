@@ -29,12 +29,21 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  border: solid transparent;
+  text-align: center;
+  padding: 30px 15px;
+  background: rgba(255, 255, 255, 0.9);
+  margin-top: 10px !important;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ 
 }
 
 .team-member {
   flex: 1 1 200px;
   max-width: 250px;
   text-align: center;
+  
 }
 
 .team-member img {
@@ -43,6 +52,7 @@
   max-width: 150px;
   border-radius: 50%;
   margin-bottom: 10px;
+  background-color: navy;
 }
 
 @keyframes fadeIn {
