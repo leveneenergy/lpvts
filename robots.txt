@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap:https://test.lpvtsolutions.com/sitemap.xml
+Sitemap:https://lpvtsolutions.com/sitemap.xml
