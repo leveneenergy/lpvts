@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us</title>
-
+  <meta name="description" content="Get in touch with LPVTS for solar energy solutions in Nigeria. Contact us for inquiries, support, and more.">
+  <meta name="keywords" content="contact, solar solutions, Nigeria, LPVTS, solar energy, inquiries, support">
+  <meta property="og:title" content="Contact LPVTS Solar Solutions">    
+  <meta property="og:description" content="Reach out to LPVTS for all your solar energy needs in Nigeria.">
+  <meta property="og:image" content="https://lpvtsolutions.com/images/LPVTs%20logo.svg">
+  <meta property="og:url" content="https://lpvtsolutions.com/contact.html">   
   <link rel="stylesheet" href="./css/contact.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" type="image/x-icon" href="./images/LPVTS favicon.png">
@@ -251,7 +256,7 @@
   // Initialize EmailJS with your public key
  (function() {
     emailjs.init({
-      publicKey: "Yyt-ipsIhKXAnM_rZ"
+      publicKey: "jkvw2eb_Ngzf5kamN"
     });
   })();
 
@@ -280,7 +285,7 @@
         message: document.getElementById('message').value
       };
 
-      emailjs.send('service_u68soli', 'template_cythqjb', formData)
+      emailjs.send('service_o232uzj', 'template_i2gbink', formData)
         .then((response) => {
           // Show success alert
           showAlert('Thank you! Your message has been sent.', 'success', alertDiv);
@@ -306,7 +311,7 @@
         email: document.getElementById('newsletterEmail').value
       };
 
-      emailjs.send(' service_u68soli', 'template_cythqjb', formData)
+      emailjs.send('service_o232uzj', 'template_i2gbink', formData)
         .then((response) => {
           // Show success alert
           showAlert('Thank you for subscribing!', 'success', newsletterAlertDiv);
