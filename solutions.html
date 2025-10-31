@@ -46,35 +46,34 @@
     </script>
 </head>
 <body>
-
  <div>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-   
+   <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
         <span class="navbar-brand">
-         <img src="./images/LPVTs logo.svg" alt="LPVTS Company Logo - Solar Solutions" loading="lazy"/>
+            <img src="./images/LPVTs logo.svg" alt="LPVTS Solutions Logo" />
         </span>
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'Home' });">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="solutions.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'Solutions' });">Solutions</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'About' });">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'Contact' });">Contact Us</a></li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
         </div>
-      </div>
-    </nav>
+    </div>
+</nav>
+
   </div>
 
 <section class="sec1 my-4">
@@ -86,7 +85,7 @@
         business owner, or industrial leaderOur solar panel solutions are designed to meet the energy needs of both residential and commercial properties. By harnessing the power of the sun, we provide efficient and sustainable energy alternatives that help reduce electricity costs and minimize carbon footprints. Whether you're looking to power your home, business, or industrial facility, our high-performance solar panels offer a reliable, cost-effective, and eco-friendly solution. Our team of experts works with you to customize the best setup for your needs, ensuring optimal energy production and long-term savings. Embrace a cleaner, greener future with our solar panel solutions.
       </p>
       <div class="solution-container" id="solution-container">
-        <!-- Dynamic solution cards will appear here -->
+        
       </div>
     </div>
   </div>
@@ -97,7 +96,6 @@
 <footer class="bg-dark text-white py-4 mt-5">
   <div class="container">
     <div class="row">
-      <!-- Company Logo & Social Media -->
       <div class="col-md-3 text-center text-md-start mb-3">
         <img src="./images/LPVTs logo.svg" alt="Company Logo" class="mb-2" style="width: 150px; display: block; margin: 0 auto;">
         <div class="text-center mt-3">
@@ -107,7 +105,7 @@
           <a href="#" style="color: #9ACD32;"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-      <!-- Support -->
+      
       <div class="col-md-3 text-center mb-3">
         <h5 class="fw-bold">Support</h5>
         <ul class="list-unstyled">
@@ -116,7 +114,7 @@
           <li><a href="contact.html" class="text-white text-decoration-none"><i class="fas fa-arrow-right me-2"></i>Get in Touch</a></li>
         </ul>
       </div>
-      <!-- Quick Links -->
+   
       <div class="col-md-3 text-center mb-3">
         <h5 class="fw-bold">Quick Links</h5>
         <ul class="list-unstyled">
@@ -126,7 +124,7 @@
           <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
         </ul>
       </div>
-      <!-- Contact Info -->
+     
       <div class="col-md-3 text-center text-md-start">
         <h5>Contact Us</h5>
         <p><i class="fas fa-map-marker-alt me-2" style="color: #9ACD32;"></i>19b Ilabere Avenue, Ikoyi, Lagos State, Nigeria</p>
@@ -140,15 +138,14 @@
   </div>
 </footer>
 
-<!-- Scripts -->
+
 <script>
-  // Sticky navbar shadow
+
   window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('navbar-shadow', window.scrollY > 10);
   });
 
-  // Dynamic Solutions
   const solutions = [
     {
       title: "Residential Solar Solutions",

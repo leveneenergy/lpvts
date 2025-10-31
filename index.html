@@ -76,33 +76,33 @@
 </head>
 <body>
   <div>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-   
+   <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
         <span class="navbar-brand">
-          <img src="./images/LPVTs logo.svg" alt="LPVTS Solutions Logo" />
+            <img src="./images/LPVTs logo.svg" alt="LPVTS Solutions Logo" />
         </span>
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'Home' });">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="solutions.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'Solutions' });">Solutions</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'About' });">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'Contact' });">Contact Us</a></li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
         </div>
-      </div>
-    </nav>
+    </div>
+</nav>
+
   </div>
 
   <main class="body" id="Home">
@@ -326,7 +326,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-    // Counter Animation 
+ 
     const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => {
       counter.innerText = '0';
@@ -344,6 +344,17 @@
       updateCounter();
     });
   </script>
+  <script>
+   
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

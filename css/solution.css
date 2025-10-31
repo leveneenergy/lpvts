@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
   }
+    body {
+          padding-top: 76px; 
+      }
 
   .sec1 {
     padding: 10px 0;
