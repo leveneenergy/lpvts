@@ -3,7 +3,9 @@
   padding: 0;
   
 }
-
+ body {
+        padding-top: 76px; 
+    }
 .container:hover {
   border-radius: 6px;
   background-color: transparent;
