@@ -3,40 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | LPVTS Solar Solutions</title>
-  <meta name="description" content="Get in touch with LPVTS for solar energy solutions in Nigeria. Contact us for inquiries, support, and more.">
-  <meta name="keywords" content="contact, solar solutions, Nigeria, LPVTS, solar energy, inquiries, support">
-  <meta property="og:title" content="Contact LPVTS Solar Solutions">    
-  <meta property="og:description" content="Reach out to LPVTS for all your solar energy needs in Nigeria.">
-  <meta property="og:image" content="https://lpvtsolutions.com/images/LPVTs logo.svg">
-  <meta property="og:url" content="https://lpvtsolutions.com/contact.html"> 
-  <link rel="canonical" href="https://lpvtsolutions.com/contact.html">
-  <link rel="stylesheet" href="./css/contact.css">
+  <title>About</title>
+  <meta name="description" content="Learn more about LPVT Solutions, a renewable energy company in Lagos, Nigeria, providing high-quality solar panel installations for homes and businesses.">
+  <meta name="keywords" content="about LPVT Solutions, renewable energy, solar panel installations, Lagos Nigeria">
+  <meta property="og:title" content="About LPVT Solutions">
+  <meta property="og:description" content="Discover LPVT Solutions, your trusted partner in solar energy solutions in Nigeria.">
+  <meta property="og:image" content="https://lpvtsolutions.com/images/LPVTs%20logo.svg">
+  <meta property="og:url" content="https://lpvtsolutions.com/about.html"> 
+  <meta property="og:url" content="https://lpvtsolutions.com/about.html" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://lpvtsolutions.com/">
+  <link rel="stylesheet" href="./css/about.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" type="image/x-icon" href="./images/LPVTS favicon.png">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6PRWLDBC5"></script>
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPRWLDBC5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('consent', 'default', {
       'analytics_storage': 'granted',
       'ad_storage': 'granted'
     });
-    gtag('js', new Date());
-    gtag('config', 'G-H6PRWLDBC5', {
-      'send_page_view': true
-    });
+    try {
+      gtag('js', new Date());
+      gtag('config', 'G-H6PRWLDBC5', {
+        'send_page_view': true,
+        'debug_mode': false,
+        'allow_enhanced_conversions': true
+      });
+    } catch (e) {
+      console.error('Google Analytics failed to load:', e);
+    }
   </script>
 
   <!-- Google Tag Manager -->
@@ -53,7 +59,8 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSVX4CTK"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <div>
+<div>
+ <div>
    <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
         <span class="navbar-brand">
@@ -82,83 +89,91 @@
 </nav>
 
   </div>
-  <!-- Contact Section -->
-  <div class="container py-5">
-    <h1 class="text-center mb-3" style="color: navy; margin-top: -40px;">Contact Us</h1>
-    <div class="row g-4">
-      <div class="col-lg-5" data-aos="fade-right">
-        <div class="contact-info h-100">
-          <h4>Get in Touch</h4>
-          <p><strong>Address:</strong>No 5 Ogalade Close, Victoria Island, Lagos, Nigeria</p>
-          <p><strong>Email:</strong> <a href="mailto:info@lpvtsolutions.com">info@lpvtsolutions.com</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+2349062892870">+234 906 289 2870</a></p>
 
-          <div class="social-icons my-3">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-twitter"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
-          
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.754147403682!2d3.414953674150096!3d6.425624993565426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8acc5685f78f%3A0xbaf5eca4c09a737b!2s5%20Ogalade%20Cl%2C%20Victoria%20Island%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1782213073703!5m2!1sen!2sng"
-          width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-
-      <div class="col-lg-7" data-aos="fade-left">
-        <div class="contact-form">
-          <h4>Send Us a Message</h4>
-          <div id="alertMessage"></div>
-          <form id="contactForm" novalidate>
-            <div class="mb-3">
-              <label class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="name" required>
-              <div class="invalid-feedback">Please enter your name.</div>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" required>
-              <div class="invalid-feedback">Please enter a valid email.</div>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Your Message</label>
-              <textarea class="form-control" rows="5" id="message" required></textarea>
-              <div class="invalid-feedback">Please enter your message.</div>
-            </div>
-            <div class="mb-3 d-flex justify-content-start">
-              <div id="recaptcha-contact"></div>
-            </div>
-            
-  
-  <div id="contactSpinner" class="text-center mb-3" style="display:none;">
-    <div class="spinner-border text-success" role="status"></div>
-    <p class="mt-2 mb-0 text-muted">Sending your message...</p>
+<div class="about-section container my-4">
+  <h1 class="text-center mb-4" style="color: navy;">About Us</h1>
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <p class="text-center">
+        Welcome to <strong>LPVT Solutions</strong> – your trusted partner in clean, renewable energy...At LPVT Solutions, we are passionate about shaping a sustainable future through clean and reliable solar energy. 
+        Our mission is to provide high-quality, affordable solar panel systems that empower homes and businesses to reduce their carbon footprint and energy costs.
+         Backed by a team of certified engineers and energy experts, we specialize in the design, installation, and maintenance of cutting-edge solar technology tailored to meet the unique energy needs of each client.
+          With a commitment to innovation and excellence, LPVT Solutions is driving the transition to a greener, more energy-efficient world—one rooftop at a time.
+          Find LPVTS Solutions in Victoria Island, Lagos.Visit us at No 5 Ogalade Close, Victoria Island, Lagos, Nigeria for all your solar panel and inverter installation needs. <a href="https://www.google.com/maps/place/No+5+ogalade+close,+Victoria+island,+Lagos,+Nigeria" target="_blank" rel="noopener noreferrer">Get Directions</a>
+   
+      </p>
+    </div>
   </div>
-            <button type="submit" class="btn btn-solar w-100" id="contactSubmit">Send Message</button>
-          </form>
+</div>
+    <div class="video-section">
+      <h3>Our Site</h3>
+      <video style="width: 600px;" src="./video/Video Project.mp4" autoplay loop muted></video>
+    </div>
+
+    
+    <div class="container mt-4">
+      <div class="row">
+          <!-- Mission Card -->
+          <div class="col-md-6">
+              <div class="card shadow-lg">
+                  <div class="card-body">
+                      <h3 class="card-title">Our Mission</h3>
+                      <p class="card-text">
+                          Our mission at LPVTS is to empower individuals and businesses with affordable, reliable,
+                           and sustainable solar energy solutions. We aim to reduce carbon footprints and provide
+                            energy independence through high-quality solar panel installations and cutting-edge
+                             technology. We are committed to creating a cleaner, greener future by making solar
+                              energy accessible to everyone.
+                      </p>
+                  </div>
+              </div>
+          </div>
+    
+          <!-- Vision Card -->
+          <div class="col-md-6">
+              <div class="card shadow-lg">
+                  <div class="card-body">
+                      <h3 class="card-title">Our Vision</h3>
+                      <p class="card-text">
+                          At LPVTS, we envision a world where solar energy is the primary power source for homes,
+                           businesses, and industries worldwide. We strive to lead the transformation towards renewable energy solutions,
+                            focusing on excellence, innovation, and sustainability. By adhering to international
+                             standards, we aim to become a global leader in the solar energy sector.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+
+  
+
+    <div class="team">
+      <h3 style="margin-bottom: 25px;">Meet Our Team</h3>
+      <div class="team-members">
+         <div class="team-member">
+          <img src="./images/Yinka.png" alt="Team Member 2"  loading="lazy">
+          <p>Yinka Adelodun- ED</p>
+          <p>Gas & Power</p>
+        </div>
+        <div class="team-member">
+          <img src="./images/nzan ogbe.png" alt="Team Member 1"  loading="lazy">
+          <p>Nzan Ogbe</p>
+          <p>Group Chief Executive Officer</p>
+        </div>
+       
+        <div class="team-member">
+          <img src="./images/ms omobola.png" alt="Team Member 3"  loading="lazy">
+          <p>Omobola Omofaiye- GM</p>
+          <p>Renewable Energies Division</p>
         </div>
       </div>
     </div>
-  </div>
 
-
-  <div class="container newsletter text-center">
-    <h4 class="mb-4">Subscribe to our newsletter for updates</h4>
-    <div id="newsletterAlertMessage" class="mb-3"></div>
-    <form id="newsletterForm" novalidate class="d-flex flex-column align-items-center">
-      <input type="email" id="newsletterEmail" class="form-control mb-3" style="max-width:400px;" placeholder="Enter your email" required>
-      <div id="recaptcha-newsletter" class="mb-3"></div>
-      
-      
-      <div id="newsletterSpinner" class="text-center mb-3" style="display:none;">
-        <div class="spinner-border text-success" role="status"></div>
-        <p class="mt-2 mb-0 text-muted">Subscribing...</p>
-      </div>
-
-      <button type="submit" class="btn btn-success" id="newsletterSubmit">Subscribe</button>
-    </form>
-  </div>
-
+<div>    
+  
+<!-- Footer Section -->
 <footer class="bg-dark text-white py-4 mt-5">
   <div class="container-fluid">
     <div class="row">
@@ -172,7 +187,6 @@
         </div>
       </div>
 
-  
       <div class="col-md-3 text-center mb-3">
         <h5 class="fw-bold">Support</h5>
         <ul class="list-unstyled">
@@ -192,10 +206,9 @@
         </ul>
       </div>
 
-     
       <div class="col-md-3 text-center text-md-start">
         <h5>Contact Us</h5>
-        <p><i class="fas fa-map-marker-alt me-2" style="color: #9ACD32;"></i>No 5 Ogalade Close, Victoria Island, Lagos, Nigeria</p>
+        <p><i class="fas fa-map-marker-alt me-2" style="color: #9ACD32;"></i>No 5 Ogalade Close, Victoria Island, Lagos, Nigeria.</p>
         <p><i class="fas fa-envelope me-2" style="color: #9ACD32;"></i>Email: info@lpvtsolutions.com</p>
         <p><i class="fas fa-phone me-2" style="color: #9ACD32;"></i>Phone: +234 906 289 2870</p>
       </div>
@@ -207,86 +220,14 @@
 </footer>
 
 
-  <button id="backToTop"><i class="bi bi-arrow-up"></i></button>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-    AOS.init();
-    emailjs.init({ publicKey: "Yyt-ipsIhKXAnM_rZ" });
+  AOS.init();
+</script>
 
-    const RECAPTCHA_SITEKEY = '6LflVvwrAAAAAPZjGAZxCbEFbkG5-u6vmANCIekK';
-    let contactWidgetId = null, newsletterWidgetId = null;
-
-    function renderRecaptchas(attempts = 0) {
-      if (typeof grecaptcha === 'undefined') {
-        if (attempts < 20) setTimeout(() => renderRecaptchas(attempts + 1), 300);
-        return;
-      }
-      contactWidgetId = grecaptcha.render('recaptcha-contact', { sitekey: RECAPTCHA_SITEKEY });
-      newsletterWidgetId = grecaptcha.render('recaptcha-newsletter', { sitekey: RECAPTCHA_SITEKEY });
-    }
-    renderRecaptchas();
-
-    function showAlert(msg, type, target) {
-      target.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show">${msg}
-      <button class="btn-close" data-bs-dismiss="alert"></button></div>`;
-    }
-
-    function getRecaptcha(widgetId) {
-      return (typeof grecaptcha !== 'undefined' && widgetId !== null) ? grecaptcha.getResponse(widgetId) : '';
-    }
-
-   
-    document.getElementById('contactForm').addEventListener('submit', e => {
-      e.preventDefault();
-      const form = e.target;
-      const spinner = document.getElementById('contactSpinner');
-      if (!form.checkValidity()) { form.classList.add('was-validated'); return; }
-
-      const token = getRecaptcha(contactWidgetId);
-      if (!token) return showAlert('Please complete the reCAPTCHA.', 'warning', alertMessage);
-
-      const data = {
-        name: document.getElementById("name").value.trim(),
-        email: document.getElementById("email").value.trim(),
-        message: document.getElementById("message").value.trim(),
-        'g-recaptcha-response': token
-      };
-
-      spinner.style.display = 'block';
-      emailjs.send('service_u68soli', 'template_cythqjb', data)
-        .then(() => { showAlert('Your message has been sent successfully!', 'success', alertMessage); form.reset(); grecaptcha.reset(contactWidgetId); })
-        .catch(() => showAlert('Failed to send message. Try again.', 'danger', alertMessage))
-        .finally(() => spinner.style.display = 'none');
-    });
-
-    
-    document.getElementById('newsletterForm').addEventListener('submit', e => {
-      e.preventDefault();
-      const form = e.target;
-      const spinner = document.getElementById('newsletterSpinner');
-      if (!form.checkValidity()) { form.classList.add('was-validated'); return; }
-
-      const token = getRecaptcha(newsletterWidgetId);
-      if (!token) return showAlert('Please complete the reCAPTCHA.', 'warning', newsletterAlertMessage);
-
-      const data = { email: document.getElementById("newsletterEmail").value.trim(), 'g-recaptcha-response': token };
-
-      spinner.style.display = 'block';
-      emailjs.send('service_u68soli', 'template_cythqjb', data)
-        .then(() => { showAlert('Subscription successful!', 'success', newsletterAlertMessage); form.reset(); grecaptcha.reset(newsletterWidgetId); })
-        .catch(() => showAlert('Failed to subscribe. Try again.', 'danger', newsletterAlertMessage))
-        .finally(() => spinner.style.display = 'none');
-    });
-
-   
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.style.display = (window.scrollY > 300) ? 'block' : 'none';
-    });
-    backToTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-  </script>
+ 
 </body>
 </html>
