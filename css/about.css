@@ -3,9 +3,39 @@
   padding: 0;
   
 }
- body {
-        padding-top: 76px; 
-    }
+body {
+  padding-top: 0;
+}
+
+
+@media (max-width: 875px) {
+  .nav-brand img {
+    margin-left: 0;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
 .container:hover {
   border-radius: 6px;
   background-color: transparent;
