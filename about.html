@@ -16,14 +16,18 @@
   <link rel="stylesheet" href="./css/about.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" type="image/x-icon" href="./images/LPVTS favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="./css/main.css">
+  
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -39,36 +43,8 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSVX4CTK"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-<div>
- <div>
-   <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-        <span class="navbar-brand">
-            <img src="./images/LPVTs logo.svg" alt="LPVTS Solutions Logo" />
-        </span>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+ <div data-component="header"></div>
 
-  </div>
 
 <div class="about-section container my-4">
   <h1 class="text-center mb-4" style="color: navy;">About Us</h1>
@@ -87,7 +63,16 @@
 </div>
     <div class="video-section">
       <h3>Our Site</h3>
-      <video style="width: 600px;" src="./video/Video Project.mp4" autoplay loop muted></video>
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/yvBRdR9zVKs?autoplay=1&mute=1&loop=1&playlist=yvBRdR9zVKs"
+          title="LPVT Solutions Site Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
     </div>
 
     
@@ -133,71 +118,27 @@
       <h3 style="margin-bottom: 25px;">Meet Our Team</h3>
       <div class="team-members">
          <div class="team-member">
-          <img src="./images/Yinka.png" alt="Team Member 2"  loading="lazy">
-          <p>Yinka Adelodun- ED</p>
-          <p>Gas & Power</p>
+          <img src="./images/Daniel Owor Agbor.png" alt="Team Member 2"  loading="lazy">
+          <p>Daniel Owor Agbor</p>
+          <p>Chairman</p>
         </div>
         <div class="team-member">
           <img src="./images/nzan ogbe.png" alt="Team Member 1"  loading="lazy">
           <p>Nzan Ogbe</p>
-          <p>Group Chief Executive Officer</p>
+          <p>Executive Vice Chairman</p>
         </div>
        
         <div class="team-member">
-          <img src="./images/ms omobola.png" alt="Team Member 3"  loading="lazy">
-          <p>Omobola Omofaiye- GM</p>
-          <p>Renewable Energies Division</p>
+          <img src="./images/NA web image.png" alt="Team Member 3"  loading="lazy">
+          <p>Nneka Arowolo</p>
+          <p>Group Managing Director</p>
         </div>
       </div>
     </div>
 
 <div>    
   
-<!-- Footer Section -->
-<footer class="bg-dark text-white py-4 mt-5">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-3 text-center text-md-start mb-3">
-        <img src="./images/LPVTs logo.svg" alt="Company Logo" class="mb-2" style="width: 150px; display: block; margin: 0 auto;">
-        <div class="text-center mt-3">
-          <a href="#" class="me-3" style="color: #9ACD32;"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="me-3" style="color: #9ACD32;"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="me-3" style="color: #9ACD32;"><i class="fab fa-instagram"></i></a>
-          <a href="#" style="color: #9ACD32;"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-
-      <div class="col-md-3 text-center mb-3">
-        <h5 class="fw-bold">Support</h5>
-        <ul class="list-unstyled">
-          <li><a href="contact.html" class="text-white text-decoration-none"><i class="fas fa-arrow-right me-2"></i>FAQs</a></li>
-          <li><a href="mailto:info@lpvtsolutions.com" class="text-white text-decoration-none"><i class="fas fa-arrow-right me-2"></i>Email Us</a></li>
-          <li><a href="contact.html" class="text-white text-decoration-none"><i class="fas fa-arrow-right me-2"></i>Get in Touch</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-3 text-center mb-3">
-        <h5 class="fw-bold">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-          <li><a href="solutions.html" class="text-white text-decoration-none">Solutions</a></li>
-          <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
-          <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-3 text-center text-md-start">
-        <h5>Contact Us</h5>
-        <p><i class="fas fa-map-marker-alt me-2" style="color: #9ACD32;"></i>No 5 Ogalade Close, Victoria Island, Lagos, Nigeria.</p>
-        <p><i class="fas fa-envelope me-2" style="color: #9ACD32;"></i>Email: info@lpvtsolutions.com</p>
-        <p><i class="fas fa-phone me-2" style="color: #9ACD32;"></i>Phone: +234 906 289 2870</p>
-      </div>
-    </div>
-    <div class="text-center mt-3">
-      <p class="mb-0">© 2025 LPVTS. All Rights Reserved.</p>
-    </div>
-  </div>
-</footer>
+<div data-component="footer"></div>
 
 
 
@@ -207,6 +148,7 @@
 <script>
   AOS.init();
 </script>
+<script src="./main.js"></script>
 
  
 </body>
