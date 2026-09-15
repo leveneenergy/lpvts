@@ -142,6 +142,58 @@ function initSite() {
       nav.style.boxShadow = window.scrollY > 8 ? '0 6px 20px rgba(10,31,61,.08)' : 'none';
     });
   }
+
+  /* Single-page product catalog + detail router (Products page) */
+  var catalogView = document.getElementById('catalog-view');
+  if (catalogView) {
+    var detailSections = document.querySelectorAll('.product-detail');
+
+    var showCatalog = function (skipHistory) {
+      catalogView.hidden = false;
+      detailSections.forEach(function (d) { d.hidden = true; });
+      if (!skipHistory) history.pushState(null, '', window.location.pathname);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    var showDetail = function (slug, skipHistory) {
+      var panel = document.getElementById('detail-' + slug);
+      if (!panel) { showCatalog(skipHistory); return; }
+      catalogView.hidden = true;
+      detailSections.forEach(function (d) { d.hidden = (d !== panel); });
+      if (!skipHistory) history.pushState(null, '', '#pkg-' + slug);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    document.addEventListener('click', function (e) {
+      var back = e.target.closest('[data-action="back"]');
+      if (back) {
+        e.preventDefault();
+        showCatalog();
+        return;
+      }
+      // IMPORTANT: scoped to .product-tile specifically. The outer
+      // .product-detail wrapper also carries a data-product attribute
+      // (to identify which panel it is), so a plain '[data-product]'
+      // selector here would match that ancestor on every click inside
+      // a detail page - including the "Request this package" link -
+      // and swallow it with preventDefault() before it could navigate.
+      var tile = e.target.closest('.product-tile[data-product]');
+      if (tile) {
+        e.preventDefault();
+        showDetail(tile.getAttribute('data-product'));
+      }
+    });
+
+    window.addEventListener('popstate', function () {
+      var slug = window.location.hash.replace('#pkg-', '');
+      if (slug) { showDetail(slug, true); } else { showCatalog(true); }
+    });
+
+    var initialSlug = window.location.hash.replace('#pkg-', '');
+    if (initialSlug) {
+      showDetail(initialSlug, true);
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
