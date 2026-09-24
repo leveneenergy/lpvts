@@ -1,0 +1,459 @@
+/* ---------- Solutions: catalog ---------- */
+.catalog-intro {
+  max-width: 640px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Centre a lone last tile when the tile count leaves an orphan (3-column layout only) */
+.catalog-grid .product-tile:last-child:nth-child(3n + 1) {
+  grid-column: 2;
+}
+
+.product-tile {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px;
+  background: #fff;
+  text-decoration: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.product-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.product-tile .ico {
+  font-size: 1.6rem;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.product-tile h3 {
+  margin-bottom: 6px;
+}
+
+.product-tile p {
+  font-size: 0.92rem;
+  margin-bottom: 14px;
+}
+
+.product-tile .link-arrow {
+  display: inline-block;
+}
+
+/* ---------- Solutions: detail view ---------- */
+.product-detail {
+  padding: 68px 0;
+}
+
+.product-detail .eyebrow {
+  color: var(--gold-d);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.product-detail .lede {
+  max-width: 60ch;
+  margin-bottom: 36px;
+}
+
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.detail-back:hover {
+  color: var(--gold-deep);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.detail-grid h4 {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 900px) {
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog-grid .product-tile:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Detail page: prose + sidebar (Pinnacle-style) ---------- */
+.product-detail .wrap>h2 {
+  font-size: clamp(1.7rem, 2.6vw, 2.1rem);
+  margin-bottom: 28px;
+  max-width: 640px;
+}
+
+.detail-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  padding: 40px;
+}
+
+.detail-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.detail-copy>p {
+  max-width: 42ch;
+}
+
+.detail-copy p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.info-sidebar {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-top: -100px;
+}
+
+.info-sidebar h4 {
+  font-size: 1rem;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sidebar-list {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.sidebar-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.sidebar-list li i {
+  color: var(--gold-deep);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.process-tagline {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--muted);
+  margin-top: -6px;
+  margin-bottom: 20px;
+}
+
+.process-list li {
+  align-items: flex-start;
+}
+
+.process-list .step-num {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gold-deep);
+  flex-shrink: 0;
+  min-width: 26px;
+}
+
+.process-list li strong {
+  display: block;
+  color: var(--navy);
+  font-size: 0.94rem;
+  margin-bottom: 2px;
+}
+
+.process-list li p {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+/* ---------- Quick-nav bar row (jumps between detail panels) ---------- */
+.quick-nav-row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 48px;
+  position: relative;
+  z-index: 3;
+  margin-bottom: -90px;
+}
+
+a.quick-nav-bar.product-tile {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  padding: 20px 16px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.3;
+  transform: none;
+  box-shadow: none;
+  transition: background 0.2s;
+}
+
+a.quick-nav-bar.product-tile:hover {
+  background: var(--gold);
+  color: var(--navy-deep);
+  transform: none;
+  box-shadow: none;
+}
+
+a.quick-nav-bar.product-tile:hover .qn-ico {
+  background: rgba(7, 21, 39, 0.18);
+}
+
+a.quick-nav-bar.product-tile.is-current {
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+
+.quick-nav-bar .qn-ico {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+a.quick-nav-bar.product-tile.is-current .qn-ico {
+  background: rgba(7, 21, 39, 0.18);
+}
+
+/* ---------- Our Solutions: dark numbered showcase (main catalog page only) ---------- */
+.showcase-band {
+  background: var(--navy);
+  padding: 50px 0;
+  overflow: hidden;
+  margin-top: 56px;
+}
+
+.showcase-heading {
+  color: #fff;
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  text-align: center;
+  margin-bottom: 56px;
+  letter-spacing: -0.01em;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.showcase-item {
+  position: relative;
+  background: var(--navy-deep);
+  padding: 36px 26px;
+  overflow: hidden;
+  transition: background 0.25s;
+}
+
+.showcase-item:hover {
+  background: var(--navy-2);
+}
+
+.showcase-num {
+  position: absolute;
+  top: -6px;
+  right: 14px;
+  font-family: var(--font-display);
+  font-size: 4.2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.06);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.showcase-ico {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.showcase-item h3 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 1.02rem;
+  margin-bottom: 8px;
+}
+
+.showcase-item p {
+  position: relative;
+  z-index: 1;
+  color: #9aa7bd;
+  font-size: 0.86rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .showcase-band {
+    padding: 56px 0;
+  }
+
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Bottom CTA banner ---------- */
+.cta-banner.has-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+  padding-top: 90px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.cta-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 21, 39, .82) 0%, rgba(10, 31, 61, .7) 45%, rgba(7, 21, 39, .9) 100%);
+  z-index: 1;
+}
+
+.cta-banner .wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.cta-banner .eyebrow {
+  display: inline-block;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+}
+
+.cta-banner h2 {
+  color: #fff;
+  font-size: clamp(1.7rem, 3vw, 1.7rem);
+  margin-bottom: 0.5em;
+}
+
+.cta-banner p {
+  color: #C6D2DB;
+  margin-bottom: 1.6em;
+}
+
+@media (max-width: 900px) {
+  .detail-panel {
+    padding: 26px;
+  }
+
+  .detail-split {
+    grid-template-columns: 1fr;
+  }
+
+  .info-sidebar {
+    margin-top: 8px;
+  }
+
+  .quick-nav-row {
+    flex-direction: column;
+    margin-bottom: -40px;
+  }
+
+  a.quick-nav-bar.product-tile {
+    flex: 0 0 auto;
+  }
+
+  .cta-banner.has-bg {
+    padding-top: 88px;
+  }
+}
